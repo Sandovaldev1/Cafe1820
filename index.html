@@ -52,19 +52,61 @@
         </nav>
     </header>
 
-    <section class="container-fluid seccion">
-        <div class="container text-center">
-            <h1>Café 1820</h1>
+    <!--Carousel-->
+    <section class="container-fluid sectionCarousel">
+        <div id="carousel1" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!--Slide 1-->
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="container">
+                        <h2>Café 1820</h2>
+                        <div class="line"></div>
+                        <p>Disfruta de la mejor calidad y el sabor incomparable de nuestro café en cada taza. Descubre
+                            nuestro mundo del café y déjate seducir por su aroma y sabor únicos.</p>
+                        <a href="#nosotros">Ver más</a>
+                    </div>
+                </div>
+                <!--Slide 2-->
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="container">
+                        <h2>Nuestros empaques</h2>
+                        <div class="line"></div>
+                        <p>La elección de un empaque adecuado nos permite la preservación
+                            por muchos meses del sabor y aroma del café.</p>
+                    </div>
+                </div>
+                <!--Slide 3-->
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="container">
+                        <h2>Somos inigualables</h2>
+                        <div class="line"></div>
+                        <p>El Café 1820 que usted disfruta es una mezcla balanceada de café Oro, que utiliza cafés
+                            provenientes de las 8 zonas de producción de café en Costa Rica.</p>
+                        <a href="#slogan">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
     </section>
-
-    <section class="container-fluid seccion1">
-        <div class="container text-center">
-            <h2> El mejor café de Costa Rica</h2>
-        </div>
-
-    </section>
-
     <section id="nosotros" class="container-fluid seccion2 py-5">
         <div class="container text-center">
             <h2 class="tituloSeccion2">Nosotros</h2>
@@ -192,6 +234,134 @@
                 </div>
             </div>
 
+            <!--Seccion de tab-->
+            <section class="container py-5 sectionTabs">
+                <h2 class="text-center">Café 1820</h2>
+                <div class="row py-5">
+                    <ul class="nav nav-tabs d-flex justify-content-center">
+                        <li class="col-lg-3 pb-4">
+                            <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#historia">
+                                <h4>Historia</h4>
+                            </a>
+                        </li>
+
+                        <li class="col-lg-3 pb-4">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#beneficios">
+                                <h4>Beneficios</h4>
+                            </a>
+                        </li>
+
+                        <li class="col-lg-3 pb-4">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#encargados">
+                                <h4>Encargados</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <!--fade es una clase privada que permite mostrar contenido de una forma suave y no rapida-->
+                    <!--active: es una clase privada que permite mostrarle al usuario que tab está activo-->
+                    <!--show: es una clase privada que permite que se muestre el contenido del tab activo-->
+                    <div class="tab-pane fade active show" id="historia">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <!--ratio ratio-16x9 es una clase privada que sirve solamente envolviendo el video de youtube en un div haciendo que el video sea responsive-->
+                                <div class="ratio ratio-16x9">
+                                    <!--rounded-1 es una clase privada que permite hacer un border-radius-->
+
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yzhDVsbRdBc"
+                                        title="Vídeo historia café 1820"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 text-center pt-5">
+                                <h4>Historia</h4>
+                                <img src="img/line.svg" alt="raya" class="img-fluid">
+                                <p>El café 1820 es uno de los cafés más famosos de Costa Rica, y su historia se remonta
+                                    a
+                                    principios del siglo XIX. En ese momento, Costa Rica era una colonia española y la
+                                    economía del país dependía principalmente de la exportación de productos agrícolas
+                                    como el cacao, el
+                                    tabaco y el añil.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="beneficios">
+                        <div class="row text-center">
+                            <div class="col-lg-5 col-md-12">
+                                <img src="img/beneficios.jpg" alt="foto de beneficios"
+                                    class="img-fluid rounded-1 imgBeneficios">
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <h4 class="pt-4">Beneficios del café</h4>
+                                <img src="img/line.svg" alt="raya" class="img-fluid">
+
+                                <ol class="list-group list-group-numbered pt-3">
+                                    <li class="list-group-item">Alta concentración de antioxidantes</li>
+                                    <li class="list-group-item">Estimula el cerebro</li>
+                                    <li class="list-group-item">Mejora el rendimiento físico</li>
+                                    <li class="list-group-item">Acelera la pérdida de peso</li>
+                                    <li class="list-group-item">Reduce el dolor de cabeza</li>
+                                    <li class="list-group-item">Reduce el riesgo de cáncer</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="encargados">
+                        <div class="row text-center">
+                            <div class="col-lg-4 col-md-6 pb-4">
+                                <div class="card">
+                                    <img src="img/fundador.jpg" class="card-img-top img-fluid" alt="foto del fundador de café 1820">
+                                    <div class="card-body">
+                                        <h5 class="card-title py-3">Leonel Jiménez</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus iure natus laborum magnam quidem eius, esse voluptas est dicta et omnis dolorem, nesciunt nihil earum nemo? Nemo porro ad dolor.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <!-- fs- es el font-size: -->
+                                        <!-- fw- es el font-weight: -->
+                                        <li class="list-group-item fs-5 fw-semibold">Fundador</li>
+                                      </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 pb-4">
+                                <div class="card">
+                                    <img src="img/gerente.jpg" class="card-img-top img-fluid" alt="foto del gerente de café 1820">
+                                    <div class="card-body">
+                                        <h5 class="card-title py-3">David Zúñiga</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus iure natus laborum magnam quidem eius, esse voluptas est dicta et omnis dolorem, nesciunt nihil earum nemo? Nemo porro ad dolor.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <!-- fs- es el font-size: -->
+                                        <!-- fw- es el font-weight: -->
+                                        <li class="list-group-item fs-5 fw-semibold">Gerente</li>
+                                      </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 pb-4">
+                                <div class="card">
+                                    <img src="img/marketing.jpg" class="card-img-top img-fluid" alt="foto de la encargada de marketing de café 1820">
+                                    <div class="card-body">
+                                        <h5 class="card-title py-3">María Esquivel</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus iure natus laborum magnam quidem eius, esse voluptas est dicta et omnis dolorem, nesciunt nihil earum nemo? Nemo porro ad dolor.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <!-- fs- es el font-size: -->
+                                        <!-- fw- es el font-weight: -->
+                                        <li class="list-group-item fs-5 fw-semibold">Marketing</li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
 
 
